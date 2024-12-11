@@ -72,6 +72,3 @@ def servidor():
 
 if __name__ == "__main__":
     servidor()
-
-
-##BOM DIA!
