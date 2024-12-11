@@ -1,9 +1,9 @@
-import socket ##Os sockets podem ser definidos como um processo de comunicação que permite dois diferentes processos de conversarem e trocarem informação entre si.
-import pickle
+import socket ##Processo de comunicação
+import pickle ##converter tanto em bytes quanto para objetos python
 
-def print_tabuleiro(board):
+def print_tabuleiro(tabuleiro): ##imprimir tabuleiro 3x3
     for i in range(3):
-        print(f"{board[i][0]} | {board[i][1]} | {board[i][2]}")
+        print(f"{tabuleiro[i][0]} | {tabuleiro[i][1]} | {tabuleiro[i][2]}")
         if i < 2:
             print("--+---+--")
 
@@ -19,8 +19,8 @@ def cliente():
             print(data)
             break
 
-        board, jogador_atual = data
-        print_tabuleiro(board)
+        tabuleiro, jogador_atual = data
+        print_tabuleiro(tabuleiro)
         print(f"Você é o jogador '{jogador_atual}'")
 
         # Envia a jogada
